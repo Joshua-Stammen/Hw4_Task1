@@ -17,8 +17,12 @@ public:
         cout << "\nEnter the street name: ";
         cin >> streetName;
     }
+    double getPrice()
+    {
+        return housePrice;
+    }
 };
- void ComparePrices ();
+ void ComparePrices (HouseInfo house[]);
 int main() {
     HouseInfo house[3];
     house[0].update(1);
@@ -29,7 +33,12 @@ int main() {
     return 0;
 }
 //Function Definitions
-void ComparePrice()
+void ComparePrice(HouseInfo house[])
 {
+    int rightHouse;
+    if(house[0].getPrice() > house[1].getPrice())
+    {
+        rightHouse =1;
+    }
 
 }
