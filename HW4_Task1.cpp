@@ -23,7 +23,7 @@ public:
         return housePrice;
     }
 };
- void ComparePrice (HouseInfo house[]);
+ int ComparePrice (HouseInfo house[]);
 int main() {
     HouseInfo house[3];
     house[0].update(1);
@@ -31,16 +31,19 @@ int main() {
     house[2].update(3);
     ComparePrice(house);
 
-    return 0;
-}
+
+    }
+
+
 //Function Definitions
-void ComparePrice(HouseInfo house[])
+int ComparePrice(HouseInfo house[])
 {
     int flagHouseOne = 0, flagHouseTwo = 0, flagHouseThree = 0;
-    cout << "One: " << house[0].getPrice() << " Two: " << house[1].getPrice() << " Three: " << house[2].getPrice() <<endl;
+    cout << "House One: $ " << house[0].getPrice() << " House Two: $ "
+         << house[1].getPrice() << " House Three: $ " << house[2].getPrice() <<endl;
     if(house[0].getPrice() >= (house[1].getPrice() && house[2].getPrice()))
     {
-        cout << "Here" << endl;
+        cout << "Here are the results " << endl;
         if(house[0].getPrice() == house[1].getPrice())
         {
             flagHouseTwo = 2;
