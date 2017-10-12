@@ -41,7 +41,7 @@ int ComparePrice(HouseInfo house[])
     int flagHouseOne = 0, flagHouseTwo = 0, flagHouseThree = 0;
     cout << "House One: $ " << house[0].getPrice() << " House Two: $ "
          << house[1].getPrice() << " House Three: $ " << house[2].getPrice() <<endl;
-    if(house[0].getPrice() > (house[1].getPrice() && house[2].getPrice()))
+    if((house[0].getPrice() <= house[1].getPrice()) && (house[0].getPrice() <= house[2].getPrice()))
     {
         cout << "Here are the results " << endl;
         if(house[1].getPrice() > house[2].getPrice())
@@ -56,7 +56,7 @@ int ComparePrice(HouseInfo house[])
         cout << "Two: " << flagHouseTwo<< endl;
         cout << "Three: " << flagHouseThree<< endl;
     }
-    else if(house[1].getPrice() > (house[0].getPrice() && house[2].getPrice()))
+    else if((house[1].getPrice() <= house[0].getPrice()) && (house[1].getPrice() <= house[2].getPrice()))
     {
         cout << "Here are the results :" << endl;
         if(house[0].getPrice() > house[2].getPrice())
@@ -71,7 +71,7 @@ int ComparePrice(HouseInfo house[])
         cout << "Two: " << flagHouseTwo<< endl;
         cout << "Three: " << flagHouseThree<< endl;
     }
-    else if(house[2].getPrice() > (house[0].getPrice() && house[1].getPrice()))
+    else if((house[2].getPrice() <= house[0].getPrice()) && (house[2].getPrice() <= house[1].getPrice()))
     {
         cout << "Here" << endl;
         if(house[1].getPrice() > house[0].getPrice())
@@ -80,7 +80,7 @@ int ComparePrice(HouseInfo house[])
         }
         if(house[0].getPrice() > house[1].getPrice())
         {
-            flagHouseTwo = 1;
+            flagHouseTwo = 2;
         }
         flagHouseOne = 3;
         cout << "One: " << flagHouseOne<< endl;
