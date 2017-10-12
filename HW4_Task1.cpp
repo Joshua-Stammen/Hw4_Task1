@@ -44,7 +44,7 @@ int ComparePrice(HouseInfo house[])
          << house[1].getPrice() << " House Three: $ " << house[2].getPrice() <<endl;
     if((house[0].getPrice() <= house[1].getPrice()) && (house[0].getPrice() <= house[2].getPrice()))
     {
-        cout << "Here are the results " << endl;
+        cout << "Here are the results5 " << endl;
         if(house[0].getPrice() == house[1].getPrice())
         {
             flagHouseTwo = 2;
@@ -85,7 +85,7 @@ int ComparePrice(HouseInfo house[])
         {
             flagHouseTwo = 2;
         }
-        flagHouseOne = 3;
+        flagHouseThree = 3;
         cout << "One: " << flagHouseOne<< endl;
         cout << "Two: " << flagHouseTwo<< endl;
         cout << "Three: " << flagHouseThree<< endl;
