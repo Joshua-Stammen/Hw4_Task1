@@ -10,10 +10,10 @@ public:
     void update(int num)
     {
         cout <<"Enter info for house " << num << endl;
-      /*  cout << "Enter the street number: ";
+        cout << "Enter the street number: ";
         cin >> streetNumber;
         cout << "Enter the street name: ";
-        cin >> streetName;*/
+        cin >> streetName;
         cout << "Enter the house price: ";
         cin >> housePrice;
         cin.ignore();
@@ -23,8 +23,16 @@ public:
     {
         return housePrice;
     }
+    int getStreetNum()
+    {
+        return streetNumber;
+    }
+    string getStreetName()
+    {
+        return streetName;
+    }
 };
- int ComparePrice (HouseInfo house[]);
+int ComparePrice (HouseInfo house[]);
 int main() {
     HouseInfo house[3];
     house[0].update(1);
@@ -33,15 +41,17 @@ int main() {
     ComparePrice(house);
 
 
-    }
+}
 
 
 //Function Definitions
 int ComparePrice(HouseInfo house[])
 {
     int flagHouseOne = 0, flagHouseTwo = 0, flagHouseThree = 0;
-    cout << "House One: $ " << house[0].getPrice() << " House Two: $ "
-         << house[1].getPrice() << " House Three: $ " << house[2].getPrice() <<endl;
+    cout << "House One:  "<< house[0].getStreetNum()<< " "<< house[0].getStreetName()<<" $"<< house[0].getPrice()
+         << "\nHouse Two: "<< house[1].getStreetNum()<< " "<< house[1].getStreetName()<<" $"<< house[1].getPrice()
+         << "\nHouse Three: "<< house[2].getStreetNum()<< " "<< house[2].getStreetName()<<" $"<< house[2].getPrice();
+
     if((house[0].getPrice() <= house[1].getPrice()) && (house[0].getPrice() <= house[2].getPrice()))
     {
         if(house[0].getPrice() == house[1].getPrice())
@@ -78,7 +88,7 @@ int ComparePrice(HouseInfo house[])
         }
         flagHouseThree = 3;
     }
-    cout << "You should buy: ";
+    cout << "\nYou should buy: ";
     if(flagHouseOne != 0)
         cout << "House One" << endl;
     if(flagHouseTwo != 0)
